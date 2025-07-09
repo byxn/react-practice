@@ -19,4 +19,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/itunes': {
+        target: 'https://itunes.apple.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/itunes/, ''),
+      },
+    },
+  },
 }) 
