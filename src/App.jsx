@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Game from './Game.jsx';
 import Podcast from './Podcast.jsx';
+import State from './State.jsx';
 
 function App() {
   const [currentExample, setCurrentExample] = useState('menu');
@@ -8,6 +9,7 @@ function App() {
   const examples = [
     { id: 'game', name: '井字棋游戏', component: <Game /> },
     { id: 'podcast', name: '播客', component: <Podcast /> },
+    { id: 'state', name: '状态管理', component: <State /> },
   ];
 
   const renderContent = () => {
